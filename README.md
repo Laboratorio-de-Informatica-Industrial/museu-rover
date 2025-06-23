@@ -123,7 +123,3 @@ O código é dividido em duas classes principais para modularidade e gerenciamen
 * **"ROS Initialization Error":**
     * Confirme que o `roscore` está em execução.
     * Verifique suas variáveis de ambiente ROS (`ROS_MASTER_URI`, `ROS_IP`).
-
----
-
-Esperamos que esta aplicação torne o controle e a visualização do seu Leo Rover mais eficientes e divertidos para o projeto do Museu Rover!
