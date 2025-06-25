@@ -1,15 +1,8 @@
 import pygame
-import sys
 import rospy
 
 
 from geometry_msgs.msg import Twist
-
-#fazer UI
-    #mostrar o input dos botões
-    #mostrar a câmera 
-        #mostrar quantos metros de distância de um obstáculo através do LiDAR(?)
-
 
 def leo_rover_controller():
     pygame.init()
@@ -50,11 +43,11 @@ def leo_rover_controller():
             twist_msg.linear.x = -linear_joy * 1  # ajuste o valor para o ganho desejado
             twist_msg.angular.z = -angular_joy * 1
 
-            # Botão para parar (ex: botão A no controle Xbox é geralmente o botão 0)
+            # Botão para parar 
             if joystick.get_button(0):
                 twist_msg.linear.x = 0
                 twist_msg.angular.z = 0
-                print("Parada de emergência acionada (Botão 0).")
+                print("Rover Parado.")
 
             # Publica comando
             pub.publish(twist_msg)
