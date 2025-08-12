@@ -18,7 +18,7 @@ def leo_rover_controller():
 
     # Inicializa o nó ROS
     rospy.init_node('pygame_leo_rover_controller', anonymous=True)
-    pub = rospy.Publisher('leo_main_duque/cmd_vel', Twist, queue_size=10)
+    pub = rospy.Publisher('/cmd_vel', Twist, queue_size=10)
     rate = rospy.Rate(10)  # 10 Hz
 
     print("Controlando o Leo Rover. Pressione Ctrl+C ou feche a janela do pygame para sair.")
